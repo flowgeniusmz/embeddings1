@@ -28,19 +28,15 @@ if "assistant_id" not in st.session_state:
 if "thread_id" not in st.session_state:
     st.session_state.thread_id = client.beta.threads.create().id
 if "messages" not in st.session_state:
-    st.session_state.messages = [
-        {"role": "assistant", "content": "I am your Dean's Assistant! How may I help you?"}
-    ]
-st.markdown(st.session_state.messages)
-# 6. Display Initial Chat
-for message in st.session_state.messages:
-    role = message.role
-    content = message.content
-    with st.chat_message(role):
-        st.markdown(content)
+    st.session_state.messages=[]
+
+st.chat_message("assistant").markdown("How may I help you today?"
+                                      
+
 
 if prompt := st.chat_input("Enter a question (ex:  A student just had his third tardy. What consequences should I consider?)"):
     new_msg = {"role": "user", "content": prompt}
+    st.chat_message("user").markdown(prompt)
     st.session_state.messages.append(new_msg)
     new_thread_msg = client.beta.threads.messages.create(
         thread_id=st.session_state.thread_id,
