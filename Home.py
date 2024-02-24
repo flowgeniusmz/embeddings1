@@ -31,7 +31,7 @@ if "messages" not in st.session_state:
     st.session_state.messages = [
         {"role": "assistant", "content": "I am your Dean's Assistant! How may I help you?"}
     ]
-
+st.markdown(st.session_state.messages)
 # 6. Display Initial Chat
 for message in st.session_state.messages:
     role = message.role
