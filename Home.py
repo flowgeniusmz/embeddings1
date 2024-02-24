@@ -30,7 +30,7 @@ if "thread_id" not in st.session_state:
 if "messages" not in st.session_state:
     st.session_state.messages=[]
 
-st.chat_message("assistant").markdown("How may I help you today?"
+st.chat_message("assistant").markdown("How may I help you today?")
                                       
 
 
