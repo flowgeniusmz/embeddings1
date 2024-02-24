@@ -36,7 +36,7 @@ st.chat_message("assistant").markdown("How may I help you today?"
 
 if prompt := st.chat_input("Enter a question (ex:  A student just had his third tardy. What consequences should I consider?)"):
     new_msg = {"role": "user", "content": prompt}
-    st.chat_message("user").markdown(prompt)
+    #st.chat_message("user").markdown(prompt)
     st.session_state.messages.append(new_msg)
     new_thread_msg = client.beta.threads.messages.create(
         thread_id=st.session_state.thread_id,
@@ -65,5 +65,8 @@ if prompt := st.chat_input("Enter a question (ex:  A student just had his third 
             message_value = message_text.value
             response_message = {"role": "assistant", "content": message_value}
             st.session_state.messages.append(response_message)
-            with st.chat_message("assistant"):
-                st.markdown(message_value)
+            for msgs in st.session_state.messages:
+                role = msgs.role
+                content = msgs.content
+                with st.chat_message(role):
+                    st.markdown(content)
