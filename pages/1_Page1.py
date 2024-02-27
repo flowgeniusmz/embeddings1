@@ -1,6 +1,7 @@
 # 0. Import Libraries
 import streamlit as st
 from config import pagesetup as ps
+from app.chat import app_chat
 
 # 1. Set Page Config
 app_name = "FlowGenius AI"
@@ -16,3 +17,5 @@ ps.set_title(varTitle=page_title, varSubtitle=page_subtitle)
 
 # 3. Set Page Overview
 ps.set_page_overview(varHeader=overview_header, varText=overview_text)
+
+app_chat()
