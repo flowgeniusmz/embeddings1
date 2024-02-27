@@ -19,8 +19,7 @@ titlecontainer = st.container()
 with titlecontainer:
     cc = st.columns(2)
     with cc[0]:
-        ps.set_title_nodiv(varTitle=page_title
-                           varSubtitle=page_subtitle)
+        ps.set_title_nodiv(varTitle=page_title, varSubtitle=page_subtitle)
     with cc[1]:
         st.image('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQroYsyWjvZmkyguxf2_XUKqcWTNLkZrRbPzPL8MU5I&s', caption='Plainfield School District 202') #Streamlit image for branding
 st.divider()
