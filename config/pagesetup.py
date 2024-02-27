@@ -10,9 +10,9 @@ from streamlit_extras.metric_cards import style_metric_cards
 #         st.markdown(f"""<span style="font-weight: bold; font-size: 2em; color:#00b084;">{varTitle} </span> <span style="font-weight: bold; color:#0096D7; font-size:1.3em;">{varSubtitle}</span>""", unsafe_allow_html=True)
 #         st.divider()
 
-def set_title_nodiv(varTitle, varSubtitle):
-        st.markdown(f"""<span style="font-weight: bold; font-size: 2em; color:#00b084;">{varTitle} </span> <span style="font-weight: bold; color:#0096D7; font-size:1.3em;">{varSubtitle}</span>""", unsafe_allow_html=True)
-        #st.divider()
+# def set_title_nodiv(varTitle, varSubtitle):
+#         st.markdown(f"""<span style="font-weight: bold; font-size: 2em; color:#00b084;">{varTitle} </span> <span style="font-weight: bold; color:#0096D7; font-size:1.3em;">{varSubtitle}</span>""", unsafe_allow_html=True)
+#         #st.divider()
 
 
 ### 2.  Wording
